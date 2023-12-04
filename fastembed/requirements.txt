@@ -1,0 +1,4 @@
+fastapi
+uvicorn
+pydantic
+fastembed==0.1.1
