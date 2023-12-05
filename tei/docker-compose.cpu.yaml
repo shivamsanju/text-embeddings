@@ -1,11 +1,10 @@
 version: "3.5"
 
 services:
-  text-embeddings-inference-gpu:
-    image: ghcr.io/huggingface/text-embeddings-inference:0.6
+  text-embeddings-inference:
+    image: ghcr.io/huggingface/text-embeddings-inference:cpu-0.6
     command: --model-id BAAI/bge-small-en-v1.5 --revision refs/pr/5
     ports:
-      - "8080:80"
+      - "8081:80"
     volumes:
       - ./data:/data
-    runtime: nvidia
